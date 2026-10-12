@@ -1,0 +1,27 @@
+{
+  "name": "sslcommerz-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SSLCOMMERZ Hosted Checkout frontend (Next.js App Router)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "16.4.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.6.2"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}

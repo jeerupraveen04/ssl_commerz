@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: sslcommerz-backend
+    runtime: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SSLCOMMERZ_STORE_ID
+        sync: false
+      - key: SSLCOMMERZ_STORE_PASSWD
+        sync: false
+      - key: SSLCOMMERZ_INITIATE_URL
+        value: https://sandbox.sslcommerz.com/gwprocess/v4/api.php
+      - key: SSLCOMMERZ_VALIDATE_URL
+        value: https://sandbox.sslcommerz.com/validator/api/validationserverAPI.php
+      # Set these in the Render dashboard after the first deploy:
+      - key: BACKEND_PUBLIC_URL
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false
